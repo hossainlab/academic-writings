@@ -1,0 +1,212 @@
+\documentclass[11pt,a4paper,roman]{moderncv}       
+\moderncvstyle{banking}                            
+\moderncvcolor{blue}                                
+\nopagenumbers{}                                  
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+% personal data
+\name{Md. Jubayer}{Hossain}
+
+\address{Department of Microbiology, Jagannath University}{}{}
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-23mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faGlobe\enspace https://jhossain.me/ & \faEnvelopeO\enspace 
+ jubayer@hdrobd.org & \faGithub\enspace hossainlab &  \faMobile\enspace 
+ +8801771083855\\  
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+{\customcventry{Running}{Master of Science in Microbiology}{Jagannath 
+University}{Dhaka, Bangladesh}{}{}}
+
+{\customcventry{Jan 2020}{Bachelor of Science in Microbiology}{Jagannath 
+University}{Dhaka, Bangladesh}{}{}}
+
+% Skills Section
+\section{KEY SKILLS}
+\begin{itemize}
+	\item \textbf{OS and Environment:} Linux(Ubuntu, Ubuntu MATE, Raspberry 
+	Pi), 
+	Windows, Jupyter Notebook, RStudio, VSCode, Atom
+	\item \textbf{Programming Languages:} Python, R, SQL, C, JavaScript
+	\item \textbf{Data Management:} NumPy, Pandas, dplyr
+	\item \textbf{Data Visualization:} Matplotlib, Seaborn, Plotnine, Plotly, 
+	ggplot2
+	\item \textbf{BioStack:} Biopython, Scikit-bio, BioPandas, Biotte
+	\item \textbf{Document Preparation:} Markdown/Rmarkdown, LaTeX, Microsoft 
+	Word, Microsoft Powerpoint
+	\item \textbf{Bioinformatics Tools:} FastQC, MultiQC, MEGA10
+	\item \textbf{Dashboard:} Streamlit, Dash, Dash-Bio
+	
+\end{itemize}
+
+
+
+
+
+\section{ACADEMIC PROJECTS}
+
+{\customcvproject{Public Perception on the Spread of Antibiotic Resistance in 
+Bangladesh}{Ongoing}
+  {\begin{itemize}
+    \item Assess the possibility of success of the anti-microbial stewardship 
+    program.
+    \item A preliminary study would show knowledge about a global issue among 
+    graduates.
+  \end{itemize}
+  }
+}
+
+{\customcvproject{Common Epitope Prediction between Dengue and 
+SARS-CoV-2}{Ongoing}
+{\begin{itemize}
+  \item Prediction of MHC-I and MHC-II binding both Dengue and SARS-CoV-2
+  \item Identify the common Epitopes between Dengue and SARS-CoV-2
+\end{itemize}
+}
+
+
+
+\section{EXPERIENCE}
+
+{\customcventry{June 2020 - Present}{Founder and Management Lead}{Health Data 
+Research Organization}{Dhaka, Bangladesh}{}
+{\begin{itemize}
+  \item Designed and built the first version of infrastructure code base which built the entire environment of SDLC at runtime. This reduced the development teams’ monthly expenses on AWS servers by 100 thousand dollars.
+  \item Designed and a centralized build strategy for all the software components of our client. The monolithic design of our build module brought new business to TCS
+\end{itemize}
+}
+
+}
+\begin{flushleft}
+\textit{Volunteer}\hspace{285.0pt}\textbf{Bio-Bio-1, Dhaka, Bangladesh}
+\begin{itemize}
+    \item Built a continuous delivery model for my client’s Development Team.\\ 
+    The incremental development method reduced three-man days of development 
+    time on a 14-day sprint.
+    \item Created Production like testing environments in AWS Cloud for sprint 
+    teams to enhance test-driven development. The new process promoted quality 
+    development culture. The number of defects were reduced by one-fifth. The 
+    time saved in fixing bugs increased the development time by 15% per week.
+\end{itemize}
+\end{flushleft}
+
+
+%\section{AWARDS AND ACHIEVEMENTS}
+%\begin{minipage}{\maincolumnwidth}%
+%	\small{
+%    	\begin{itemize}
+%          \item Winner, Tata Innovista, November 2016
+%          \item President of XYZ Club, Public Relations Manager of Swarthmore 
+%QWE Club
+%          \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, 
+%Javascript, jQuery, NodeJS
+%          \item Fluent in Gibberish, conversational in Nonsense
+%		\end{itemize}}%
+%\end{minipage}%
+%      
+%}
+
+
+\section{Certifications}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+		\begin{itemize}
+			\item Programming for Everybody (Getting Started with Python)
+			\item COVID19 Data Analysis Using Python
+			\item The Data Scientist’s Toolbox
+			\item Create Interactive Dashboards with Streamlit and Python
+			\item Essential Epidemiologic Tools for Public Health Practice
+			\item Data Visualization with Plotly Express
+			\item Spreadsheets for Beginners using Google Sheets
+			\item Exploratory Data Analysis with Seaborn
+			\item Statistical Data Visualization with Seaborn
+			\item Analyze Box Office Data with Seaborn and Python
+	\end{itemize}}%
+\end{minipage}%
+
+}
+
+
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the 
+%%name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
