@@ -5,5 +5,5 @@
 
 ![](./img/resume.jpg)
 
-# Cover Letter Outout
+# Cover Letter Output 
 ![](./img/cover-letter_v1.jpg)
