@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%thesis by C. Has%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper,twoside,openright]{report} 
+%=========================Preamble===================================
+
+\usepackage[T1]{fontenc} %font encoding
+\usepackage{mathptmx}    %adobe times roman font
+\usepackage{amsmath,amssymb,amsfonts} %ams packages for math
+\usepackage{setspace} %for line spacing
+\usepackage[top=1in,bottom=1in,left=3.2cm,right=2.6cm]{geometry} %for margins
+\usepackage{graphicx}\graphicspath{{gfx/}} %to add images
+\usepackage{subcaption} %for subfig.
+
+\usepackage[sort&compress]{natbib} %format bibliography
+\renewcommand{\bibname}{Refrences}
+
+\usepackage[intoc,refpage]{nomencl}\makenomenclature %for list of symbols
+\renewcommand{\nomname}{List of Symbols}
+\renewcommand{\pagedeclaration}[1]{\dotfill\hyperpage{#1}}
+
+\usepackage{emptypage} %removes fancy headers from blank page
+\usepackage[nottoc]{tocbibind} %adds ref and ind in toc
+\usepackage[toc,page]{appendix} %creats a new page for appendices title
+\usepackage{quotchap} %for fancy chap style
+
+\usepackage[hidelinks]{hyperref} %creats the links
+
+\usepackage{fancyhdr}\pagestyle{fancy} %for fancy headers and footers
+\fancyhf{}
+\fancyhead[RE]{\it{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\it{\nouppercase{\rightmark}}}
+\fancyhead[LE,RO]{\thepage}
+\fancyfoot{}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%\title{How to Write Report in \LaTeX\\[1.5cm] \includegraphics[scale=0.6]{latex}}
+%\author{Chandra Has}
+%\date{Institute Name\\ Department Name\\[5mm] \today}
+
+\raggedbottom
+
+\includeonly{Preliminary-pages/title,%
+	Preliminary-pages/copyright,%
+	Preliminary-pages/dedication,%
+    Preliminary-pages/certificate,%
+    Preliminary-pages/acknowledgements,%
+    Preliminary-pages/declaration,%
+    Preliminary-pages/abstract,%
+    Main-pages/ch1,Main-pages/ch2,Main-pages/ch3,Main-pages/app1,Main-pages/pub}
+%=======================================================================
+\begin{document}
+
+%========================preliminary pages============================
+\pagenumbering{roman}
+\pagestyle{plain}
+\onehalfspacing
+%-----------------
+
+\include{Preliminary-pages/title}
+\include{Preliminary-pages/copyright}
+\include{Preliminary-pages/dedication}
+%\include{Preliminary-pages/approval-sheet}
+\include{Preliminary-pages/certificate}
+\include{Preliminary-pages/acknowledgements}
+\include{Preliminary-pages/declaration}
+\include{Preliminary-pages/abstract}
+
+%-----
+\pagestyle{fancy}
+%----
+\tableofcontents
+\listoffigures
+\listoftables
+
+\printnomenclature[5cm]
+\cleardoublepage
+
+%==========================main pages=================================
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\doublespacing
+%-----------------------
+
+\include{Main-pages/ch1}
+\include{Main-pages/ch2}	
+\include{Main-pages/ch3}	
+%\include{Main-pages/ch4}	
+%\include{Main-pages/ch5}	
+
+\onehalfspacing
+%\appendix
+\begin{appendices}
+\include{Main-pages/app1}	
+%\include{Main-pages/app2}	
+%\include{Main-pages/app3}		
+\end{appendices}
+		
+\bibliographystyle{plainnat}	
+\bibliography{Main-pages/mybib}
+
+\include{Main-pages/pub}
+	
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
