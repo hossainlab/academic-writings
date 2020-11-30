@@ -1,16 +1,16 @@
-\documentclass[12pt,a4paper,twoside,openright]{report} 
-\usepackage[T1]{fontenc} %font encoding
-\usepackage{mathptmx}    %adobe times roman font
+\documentclass[12pt,a4paper]{report} 
+%=========================Preamble============================
+\usepackage[T1]{fontenc} % font encoding
+\usepackage{mathptmx}    % adobe times roman font
 \usepackage{amsmath,amssymb,amsfonts} %ams packages for math
-\usepackage{setspace} %for line spacing
+\usepackage{setspace} % for line spacing
 \usepackage[top=1in,bottom=1in,left=3.2cm,right=2.6cm]{geometry} %for margins
-\usepackage{graphicx}\graphicspath{{img/}} %to add images
+\usepackage{graphicx}\graphicspath{{images/}} %to add images
 \usepackage{subcaption} %for subfig.
-
+\usepackage[intoc,refpage]{nomencl}\makenomenclature %for list of symbols
 \usepackage[sort&compress]{natbib} %format bibliography
 \renewcommand{\bibname}{Refrences}
 
-\usepackage[intoc,refpage]{nomencl}\makenomenclature %for list of symbols
 \renewcommand{\nomname}{List of Symbols}
 \renewcommand{\pagedeclaration}[1]{\dotfill\hyperpage{#1}}
 
@@ -18,31 +18,34 @@
 \usepackage[nottoc]{tocbibind} %adds ref and ind in toc
 \usepackage[toc,page]{appendix} %creats a new page for appendices title
 \usepackage{quotchap} %for fancy chap style
+
 \usepackage[hidelinks]{hyperref} %creats the links
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+     citecolor = blue
+}
+
 \usepackage{fancyhdr}\pagestyle{fancy} %for fancy headers and footers
 \fancyhf{}
 \fancyhead[RE]{\it{\nouppercase{\leftmark}}}
 \fancyhead[LO]{\it{\nouppercase{\rightmark}}}
 \fancyhead[LE,RO]{\thepage}
 \fancyfoot{}
-
+\usepackage{blindtext}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-
-%\title{How to Write Report in \LaTeX\\[1.5cm] \includegraphics[scale=0.6]{latex}}
-%\author{Chandra Has}
-%\date{Institute Name\\ Department Name\\[5mm] \today}
-
 \raggedbottom
 
 \includeonly{pages/title,%
 	pages/copyright,%
 	pages/dedication,%
-    pages/certificate,%
+    Ppages/certificate,%
     pages/acknowledgements,%
     pages/declaration,%
     pages/abstract,%
-    Main-pages/ch1,Main-pages/ch2,Main-pages/ch3,Main-pages/app1,Main-pages/pub}
+}
 %=======================================================================
 \begin{document}
 
@@ -55,10 +58,9 @@
 \include{pages/title}
 \include{pages/copyright}
 \include{pages/dedication}
-%\include{Preliminary-pages/approval-sheet}
 \include{pages/certificate}
-\include{pages/acknowledgements}
 \include{pages/declaration}
+\include{pages/acknowledgements}
 \include{pages/abstract}
 
 %-----
@@ -77,38 +79,26 @@
 \doublespacing
 %-----------------------
 
-\include{chapters/ch1}
-\include{chapters/ch2}	
-\include{chapters/ch3}	
-%\include{Main-pages/ch4}	
-%\include{Main-pages/ch5}	
-
+\input{chapters/ch1}
+\input{chapters/ch2} 
+\input{chapters/ch3}
+\input{chapters/ch4}
+\input{chapters/ch5} 
+\input{chapters/ch6} 
 \onehalfspacing
-%\appendix
+\appendix
 \begin{appendices}
-\include{chapters/app1}	
-%\include{Main-pages/app2}	
-%\include{Main-pages/app3}		
+\include{pages/app1}	
+\include{Main-pages/app2}	
+\include{Main-pages/app3}		
 \end{appendices}
-		
-\bibliographystyle{plainnat}	
-\bibliography{chapters/references}
-\include{chapters/pub}
+
+\bibliographystyle{plain}	
+\bibliography{references}
+
+\input{pages/credits} 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
