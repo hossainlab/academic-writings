@@ -1,13 +1,10 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%thesis by C. Has%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt,a4paper,twoside,openright]{report} 
-%=========================Preamble===================================
-
 \usepackage[T1]{fontenc} %font encoding
 \usepackage{mathptmx}    %adobe times roman font
 \usepackage{amsmath,amssymb,amsfonts} %ams packages for math
 \usepackage{setspace} %for line spacing
 \usepackage[top=1in,bottom=1in,left=3.2cm,right=2.6cm]{geometry} %for margins
-\usepackage{graphicx}\graphicspath{{gfx/}} %to add images
+\usepackage{graphicx}\graphicspath{{img/}} %to add images
 \usepackage{subcaption} %for subfig.
 
 \usepackage[sort&compress]{natbib} %format bibliography
@@ -21,9 +18,7 @@
 \usepackage[nottoc]{tocbibind} %adds ref and ind in toc
 \usepackage[toc,page]{appendix} %creats a new page for appendices title
 \usepackage{quotchap} %for fancy chap style
-
 \usepackage[hidelinks]{hyperref} %creats the links
-
 \usepackage{fancyhdr}\pagestyle{fancy} %for fancy headers and footers
 \fancyhf{}
 \fancyhead[RE]{\it{\nouppercase{\leftmark}}}
@@ -40,13 +35,13 @@
 
 \raggedbottom
 
-\includeonly{Preliminary-pages/title,%
-	Preliminary-pages/copyright,%
-	Preliminary-pages/dedication,%
-    Preliminary-pages/certificate,%
-    Preliminary-pages/acknowledgements,%
-    Preliminary-pages/declaration,%
-    Preliminary-pages/abstract,%
+\includeonly{pages/title,%
+	pages/copyright,%
+	pages/dedication,%
+    pages/certificate,%
+    pages/acknowledgements,%
+    pages/declaration,%
+    pages/abstract,%
     Main-pages/ch1,Main-pages/ch2,Main-pages/ch3,Main-pages/app1,Main-pages/pub}
 %=======================================================================
 \begin{document}
@@ -57,14 +52,14 @@
 \onehalfspacing
 %-----------------
 
-\include{Preliminary-pages/title}
-\include{Preliminary-pages/copyright}
-\include{Preliminary-pages/dedication}
+\include{pages/title}
+\include{pages/copyright}
+\include{pages/dedication}
 %\include{Preliminary-pages/approval-sheet}
-\include{Preliminary-pages/certificate}
-\include{Preliminary-pages/acknowledgements}
-\include{Preliminary-pages/declaration}
-\include{Preliminary-pages/abstract}
+\include{pages/certificate}
+\include{pages/acknowledgements}
+\include{pages/declaration}
+\include{pages/abstract}
 
 %-----
 \pagestyle{fancy}
@@ -82,25 +77,24 @@
 \doublespacing
 %-----------------------
 
-\include{Main-pages/ch1}
-\include{Main-pages/ch2}	
-\include{Main-pages/ch3}	
+\include{chapters/ch1}
+\include{chapters/ch2}	
+\include{chapters/ch3}	
 %\include{Main-pages/ch4}	
 %\include{Main-pages/ch5}	
 
 \onehalfspacing
 %\appendix
 \begin{appendices}
-\include{Main-pages/app1}	
+\include{chapters/app1}	
 %\include{Main-pages/app2}	
 %\include{Main-pages/app3}		
 \end{appendices}
 		
 \bibliographystyle{plainnat}	
-\bibliography{Main-pages/mybib}
+\bibliography{chapters/references}
+\include{chapters/pub}
 
-\include{Main-pages/pub}
-	
 \end{document}
 
 
