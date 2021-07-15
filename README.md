@@ -9,6 +9,7 @@
 - Seminar
 - Synopsis
 - Presentation
+- Research Proposal
 
 ## Resources
 - https://www.youtube.com/c/chandrahashbti/channels
